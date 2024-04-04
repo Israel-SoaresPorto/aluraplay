@@ -1,0 +1,144 @@
+/* CABEÇALHO */
+
+.cabecalho__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+}
+
+.cabecalho__pesquisar__item {
+  display: none;
+}
+
+/* MENU LATERAL */
+
+.menu__container {
+  position: fixed;
+  bottom: 0%;
+  height: 4.625em;
+  width: 100%;
+}
+
+.menu__lista {
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.menu__lista li {
+  align-self: center;
+}
+
+.menu__lista:nth-child(2),
+.menu__lista:nth-child(3),
+.menu__lista:nth-child(4) {
+  display: none;
+}
+
+.menu__itens {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+}
+
+/* RODAPÉ */
+
+.rodape__container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+/* SEÇÃO SUPERIOR */
+
+.superior__secao__container {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  gap: 1em;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+
+/* SECÃO DE VÍDEOS */
+
+.videos__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2em;
+}
+
+.videos__item {
+    width: 19em;
+    height: 17.5em;
+    flex-grow: 1;
+}
+
+@media screen and (min-width: 52.125em) {
+  /* CABEÇALHO */
+
+  .cabecalho__pesquisar__item {
+    display: block;
+  }
+
+  /* MENU LATERAL */
+
+  .menu__container {
+    left: 0;
+    height: auto;
+    width: 4.625em;
+    top: 5em;
+  }
+
+  .menu__lista {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 2em;
+  }
+
+  /* RODAPÉ */
+
+  .rodape__container {
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 90em) {
+  /* MENU LATERAL */
+
+  .menu__container {
+    width: 14.75em;
+    overflow-y: scroll;
+  }
+
+  .menu__lista {
+    height: auto;
+    padding: 1.25em 1.1em;
+    gap: 1em;
+  }
+
+  .menu__lista:nth-child(2),
+  .menu__lista:nth-child(3),
+  .menu__lista:nth-child(4) {
+    display: flex;
+  }
+
+  .menu__lista:nth-child(3) {
+    flex-direction: column-reverse;
+  }
+
+  .menu__lista:last-child {
+    flex-direction: column-reverse;
+  }
+
+  .menu__itens {
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+  }
+
+}
